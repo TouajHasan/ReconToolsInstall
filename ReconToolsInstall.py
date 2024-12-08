@@ -183,6 +183,10 @@ if __name__ == "__main__":
     simulate_long_process()
 
     if is_kali_linux():
+        
+        # Install additional tools via apt
+        install_additional_tools()
+        
         tools = {
             'gau': ('go install github.com/lc/gau@latest', '/home/{os.getenv("USER")}/go/bin/gau'),
             'httpx': ('go install github.com/projectdiscovery/httpx/cmd/httpx@latest', '/home/{os.getenv("USER")}/go/bin/httpx'),
@@ -195,8 +199,7 @@ if __name__ == "__main__":
         
         install_nuclei()  # Install Nuclei and copy the binary to /bin
 
-        # Install additional tools via apt
-        install_additional_tools()
+        
 
     else:
         print(f"{Fore.RED}This script is intended to run on Kali Linux only. Exiting.")
