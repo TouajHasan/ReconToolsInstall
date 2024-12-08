@@ -160,7 +160,7 @@ def update_nuclei_templates():
         print(f"{Fore.RED}An error occurred while updating Nuclei templates: {e}")
 
 def install_additional_tools():
-    additional_tools = ['assetfinder', 'subfinder', 'sublist3r','amass','dirsearch']
+    additional_tools = ['assetfinder', 'subfinder', 'sublist3r','amass','dirsearch','golang','nmap']
 
     for tool in additional_tools:
         if not is_command_installed(tool):
